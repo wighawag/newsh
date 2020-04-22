@@ -1,6 +1,6 @@
 {
-  "name": "newsh",
-  "version": "0.7.3",
+  "name": "wighawag_newsh",
+  "version": "0.0.1",
   "main": "build/index.js",
   "description": "cross-platform library to execute commands in a new shells",
   "keywords": [
@@ -15,12 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ranyitz/newsh"
-  },
-  "author": {
-    "name": "Ran Yitzhaki",
-    "email": "ranyitz@gmail.com",
-    "url": "https://github.com/ranyitz"
+    "url": "https://github.com/wighawag/newsh"
   },
   "license": "MIT",
   "bin": {
