@@ -1,6 +1,6 @@
 {
   "name": "wighawag_newsh",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "build/index.js",
   "description": "cross-platform library to execute commands in a new shells",
   "keywords": [
