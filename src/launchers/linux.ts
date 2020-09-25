@@ -19,9 +19,11 @@ export const linux: Launcher = (execFilePath, options) => {
     }
   }
   try {
-    execa.sync(terminal!, argArray, {
-      detached: true
+    const subprocess = execa(terminal!, argArray, {
+      detached: true,
+      stdio: "ignore"
     });
+    subprocess.unref();
   } catch (error) {
     execa.sync("sh", [execFilePath]);
   }
