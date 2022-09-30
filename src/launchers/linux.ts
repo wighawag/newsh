@@ -28,3 +28,31 @@ export const linux: Launcher = (execFilePath, options) => {
     execa.sync("sh", [execFilePath]);
   }
 };
+
+
+/*
+import execa from "execa";
+import { Launcher } from "./";
+import commandExists = require("command-exists");
+const commandExistsSync = commandExists.sync;
+
+export const linux: Launcher = (execFilePath, options) => {
+  const terminal = options.terminalApp
+    ? options.terminalApp
+    : ["gnome-terminal", "konsole", "xterm", "io.elementary.terminal"].find(
+        commandExistsSync
+      );
+  
+  if (terminal) {
+    const splitted = terminal?.split(' ');
+    const command = splitted[0];
+    const rest = splitted.length > 1 ? splitted.slice(1) :[];
+    execa.sync(command, [...rest, "-e", `sh ${execFilePath}`], {
+      detached: true
+    });
+  } else {
+    execa.sync("sh", [execFilePath]);
+  }
+};
+
+*/
